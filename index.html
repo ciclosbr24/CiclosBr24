@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ciclos Br24 | Enlaces Oficiales</title>
-  <meta name="description" content="Ciclos Br24 - Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado. Since 2020." />
+  <meta name="description" content="Ciclos Br24 - Venta de repuestos, llantas y accesorios para bicicletas y bicimotos." />
 
   <!-- Tipografía Plus Jakarta Sans & Inter desde Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -138,18 +138,47 @@
       </div>
     </div>
 
-    <!-- Título Principal y Subtítulo -->
+    <!-- Título Principal, Encabezado y Accesos Rápidos Yape / Plin -->
     <section class="text-center px-6 mt-5">
       <h1 class="text-[26px] sm:text-[28px] font-extrabold text-slate-900 tracking-tight leading-tight">
         Ciclos Br24
       </h1>
       <p class="mt-2 text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed max-w-[340px] mx-auto font-medium">
-        Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado. Since 2020.
+        Venta de repuestos, llantas y accesorios para bicicletas y bicimotos
       </p>
+
+      <!-- Símbolos de Yape y Plin debajo del encabezado -->
+      <div class="mt-4 flex items-center justify-center gap-3">
+        <!-- Botón Símbolo Yape -->
+        <button
+          type="button"
+          onclick="openQrModal('yape')"
+          aria-label="Ver QR de Yape"
+          class="bg-white hover:bg-purple-50/70 border border-slate-200/80 shadow-sm hover:shadow-md rounded-full pl-2 pr-3.5 py-1.5 flex items-center gap-2 transition-all active:scale-95 cursor-pointer"
+        >
+          <span class="w-8 h-8 rounded-full bg-[#742284] text-white flex items-center justify-center font-extrabold text-[10px] tracking-tight shadow-xs">
+            yape
+          </span>
+          <span class="text-xs font-extrabold text-slate-800">Yape QR</span>
+        </button>
+
+        <!-- Botón Símbolo Plin -->
+        <button
+          type="button"
+          onclick="openQrModal('plin')"
+          aria-label="Ver QR de Plin"
+          class="bg-white hover:bg-cyan-50/70 border border-slate-200/80 shadow-sm hover:shadow-md rounded-full pl-2 pr-3.5 py-1.5 flex items-center gap-2 transition-all active:scale-95 cursor-pointer"
+        >
+          <span class="w-8 h-8 rounded-full bg-gradient-to-br from-[#00e0b8] to-[#0099ff] text-white flex items-center justify-center font-extrabold text-[10px] tracking-tight shadow-xs">
+            plin
+          </span>
+          <span class="text-xs font-extrabold text-slate-800">Plin QR</span>
+        </button>
+      </div>
     </section>
 
     <!-- Sección Principal de Tarjetas Tipo Píldora -->
-    <section class="mt-7 px-4 sm:px-6">
+    <section class="mt-6 px-4 sm:px-6">
       <h2 class="text-center text-[11.5px] font-bold uppercase tracking-[0.16em] text-slate-500 mb-4">
         CONECTA CON NOSOTROS
       </h2>
@@ -186,67 +215,7 @@
           </div>
         </a>
 
-        <!-- Tarjeta 2: YAPE (Abre Modal con QR YAPE.jpg) -->
-        <button
-          type="button"
-          onclick="openQrModal('yape')"
-          class="pill-card w-full text-left flex items-center justify-between p-3.5 sm:p-4 group cursor-pointer"
-        >
-          <div class="flex items-center gap-3.5 min-w-0">
-            <div class="w-12 h-12 rounded-full bg-[#742284]/12 flex items-center justify-center shrink-0">
-              <div class="w-10 h-10 rounded-full bg-[#742284] text-white flex items-center justify-center shadow-sm font-extrabold text-[11px] tracking-tight">
-                yape
-              </div>
-            </div>
-            <div class="min-w-0">
-              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">YAPE</p>
-              <p class="text-[13px] font-semibold text-slate-700 truncate">908 522 322</p>
-              <p class="text-[11.5px] text-slate-500 truncate">Omer Eduardo Barreto Davila · Ver QR</p>
-            </div>
-          </div>
-
-          <div class="w-10 h-10 rounded-full bg-[#742284] group-hover:bg-[#5d1a6a] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
-            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <path d="M14 14h3v3h-3z"/>
-              <path d="M20 14v7h-7"/>
-            </svg>
-          </div>
-        </button>
-
-        <!-- Tarjeta 3: PLIN (Abre Modal con QR PLIN.jpg) -->
-        <button
-          type="button"
-          onclick="openQrModal('plin')"
-          class="pill-card w-full text-left flex items-center justify-between p-3.5 sm:p-4 group cursor-pointer"
-        >
-          <div class="flex items-center gap-3.5 min-w-0">
-            <div class="w-12 h-12 rounded-full bg-[#00d3b8]/15 flex items-center justify-center shrink-0">
-              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#00e0b8] to-[#0099ff] text-white flex items-center justify-center shadow-sm font-extrabold text-[11px] tracking-tight">
-                plin
-              </div>
-            </div>
-            <div class="min-w-0">
-              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">PLIN</p>
-              <p class="text-[13px] font-semibold text-slate-700 truncate">908 522 322</p>
-              <p class="text-[11.5px] text-slate-500 truncate">Omer Eduardo Barreto · Ver QR</p>
-            </div>
-          </div>
-
-          <div class="w-10 h-10 rounded-full bg-[#00b8c8] group-hover:bg-[#009bb0] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
-            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <rect x="3" y="3" width="7" height="7" rx="1"/>
-              <rect x="14" y="3" width="7" height="7" rx="1"/>
-              <rect x="3" y="14" width="7" height="7" rx="1"/>
-              <path d="M14 14h3v3h-3z"/>
-              <path d="M20 14v7h-7"/>
-            </svg>
-          </div>
-        </button>
-
-        <!-- Tarjeta 4: TIKTOK -->
+        <!-- Tarjeta 2: TIKTOK -->
         <a
           href="https://www.tiktok.com/@ciclosbr24?_t=8nxn4pbcBZV&_r=1"
           target="_blank"
@@ -276,7 +245,7 @@
           </div>
         </a>
 
-        <!-- Tarjeta 5: FACEBOOK -->
+        <!-- Tarjeta 3: FACEBOOK -->
         <a
           href="https://www.facebook.com/profile.php?id=61561751783725"
           target="_blank"
@@ -306,7 +275,7 @@
           </div>
         </a>
 
-        <!-- Tarjeta 6: UBICACIÓN EN GOOGLE MAPS -->
+        <!-- Tarjeta 4: UBICACIÓN EN GOOGLE MAPS -->
         <a
           href="https://www.google.com/maps/place/Ciclos+BR24,+jiron,+Monterrey+540,+San+Mart%C3%ADn+de+Porres+15101/data=!4m2!3m1!1s0x9105cfe42dde20af:0x829b1f7623aec383?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEzNi4xMDEYACCIJypaLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjMwODE2LDk0MjE4NjUzLDQ3MDg3MTE4LDQ3MDg0MzkzLDk0MjEzMjAwQgJQRQ%3D%3D"
           target="_blank"
@@ -352,7 +321,7 @@
   <div
     id="qrModal"
     onclick="closeQrModalOnBackdrop(event)"
-    class="qr-modal-backdrop fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4"
+    class="qr-modal-backdrop fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-sm flex items-center justify-center p-4"
   >
     <div class="qr-modal-box w-full max-w-[360px] bg-white rounded-[28px] shadow-2xl overflow-hidden border border-slate-100">
       <div id="qrModalHeader" class="px-5 py-4 flex items-center justify-between text-white bg-[#742284]">
@@ -469,10 +438,12 @@
       imgEl.src = data.img;
 
       document.getElementById('qrModal').classList.add('open');
+      document.body.style.overflow = 'hidden';
     }
 
     function closeQrModal() {
       document.getElementById('qrModal').classList.remove('open');
+      document.body.style.overflow = '';
     }
 
     function closeQrModalOnBackdrop(event) {
