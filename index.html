@@ -82,20 +82,25 @@
       transform: scale(0.985);
     }
 
-    /* Botones circulares rápidos */
-    .quick-circle {
-      background: #ffffff;
-      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.07);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    /* Modal QR */
+    .qr-modal-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.22s ease;
     }
 
-    .quick-circle:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(14, 165, 233, 0.2);
+    .qr-modal-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
     }
 
-    .quick-circle:active {
-      transform: scale(0.94);
+    .qr-modal-box {
+      transform: scale(0.94) translateY(10px);
+      transition: transform 0.24s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .qr-modal-backdrop.open .qr-modal-box {
+      transform: scale(1) translateY(0);
     }
   </style>
 </head>
@@ -143,93 +148,8 @@
       </p>
     </section>
 
-    <!-- Fila Horizontal de 5 Botones Circulares Rápidos -->
-    <section aria-label="Accesos directos" class="mt-6 px-4">
-      <div class="grid grid-cols-5 gap-2 max-w-[390px] mx-auto text-center">
-
-        <!-- 1. WhatsApp -->
-        <a
-          href="https://api.whatsapp.com/send?phone=51908522322"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center group"
-        >
-          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#25D366]">
-            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-              <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.984L2 22l5.188-1.359a9.927 9.927 0 0 0 4.844 1.258h.004c5.514 0 9.964-4.453 9.964-9.969 0-2.662-1.037-5.164-2.92-7.047A9.903 9.903 0 0 0 12.031 2zm5.822 14.273c-.246.693-1.432 1.326-1.984 1.408-.508.076-1.15.109-1.857-.115-.43-.137-.982-.32-1.691-.627-2.977-1.285-4.92-4.281-5.068-4.479-.148-.197-1.211-1.611-1.211-3.074 0-1.463.766-2.182 1.037-2.479.271-.297.594-.371.791-.371.197 0 .395.002.568.01.182.008.426-.068.666.508.246.594.838 2.045.912 2.193.074.148.123.32.025.518-.098.197-.148.32-.297.494-.148.174-.312.389-.445.521-.148.148-.303.309-.131.605.174.297.771 1.271 1.656 2.061 1.139 1.016 2.098 1.33 2.395 1.479.297.148.469.123.643-.074.174-.197.742-.865.94-1.162.197-.297.395-.246.666-.148.271.098 1.729.816 2.025.965.297.148.494.223.568.346.074.123.074.715-.172 1.408z"/>
-            </svg>
-          </div>
-          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">WhatsApp</span>
-        </a>
-
-        <!-- 2. TikTok -->
-        <a
-          href="https://www.tiktok.com/@ciclosbr24?_t=8nxn4pbcBZV&_r=1"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center group"
-        >
-          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-slate-900">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
-            </svg>
-          </div>
-          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">TikTok</span>
-        </a>
-
-        <!-- 3. Facebook -->
-        <a
-          href="https://www.facebook.com/profile.php?id=61561751783725"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center group"
-        >
-          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#1877F2]">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
-            </svg>
-          </div>
-          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Facebook</span>
-        </a>
-
-        <!-- 4. Ubicación -->
-        <a
-          href="https://www.google.com/maps/place/Ciclos+BR24,+jiron,+Monterrey+540,+San+Mart%C3%ADn+de+Porres+15101/data=!4m2!3m1!1s0x9105cfe42dde20af:0x829b1f7623aec383?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEzNi4xMDEYACCIJypaLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjMwODE2LDk0MjE4NjUzLDQ3MDg3MTE4LDQ3MDg0MzkzLDk0MjEzMjAwQgJQRQ%3D%3D"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="flex flex-col items-center group"
-        >
-          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#EA4335]">
-            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
-              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-            </svg>
-          </div>
-          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Ubicación</span>
-        </a>
-
-        <!-- 5. Compartir -->
-        <button
-          id="shareBtn"
-          type="button"
-          class="flex flex-col items-center group focus:outline-none cursor-pointer"
-        >
-          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-slate-800">
-            <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
-              <circle cx="18" cy="5" r="3"/>
-              <circle cx="6" cy="12" r="3"/>
-              <circle cx="18" cy="19" r="3"/>
-              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
-              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
-            </svg>
-          </div>
-          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Compartir</span>
-        </button>
-
-      </div>
-    </section>
-
     <!-- Sección Principal de Tarjetas Tipo Píldora -->
-    <section class="mt-8 px-4 sm:px-6">
+    <section class="mt-7 px-4 sm:px-6">
       <h2 class="text-center text-[11.5px] font-bold uppercase tracking-[0.16em] text-slate-500 mb-4">
         CONECTA CON NOSOTROS
       </h2>
@@ -244,7 +164,6 @@
           class="pill-card flex items-center justify-between p-3.5 sm:p-4 group"
         >
           <div class="flex items-center gap-3.5 min-w-0">
-            <!-- Icono circular de marca -->
             <div class="w-12 h-12 rounded-full bg-[#25D366]/12 flex items-center justify-center shrink-0">
               <div class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-sm">
                 <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -252,7 +171,6 @@
                 </svg>
               </div>
             </div>
-            <!-- 3 líneas de texto exactas -->
             <div class="min-w-0">
               <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">WHATSAPP OFICIAL</p>
               <p class="text-[13px] font-semibold text-slate-700 truncate">+51 908 522 322</p>
@@ -260,7 +178,6 @@
             </div>
           </div>
 
-          <!-- Botón circular de acción a la derecha -->
           <div class="w-10 h-10 rounded-full bg-[#0ea5e9] group-hover:bg-[#0284c7] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
             <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
               <path d="M7 17L17 7"/>
@@ -269,7 +186,67 @@
           </div>
         </a>
 
-        <!-- Tarjeta 2: TIKTOK -->
+        <!-- Tarjeta 2: YAPE (Abre Modal con QR YAPE.jpg) -->
+        <button
+          type="button"
+          onclick="openQrModal('yape')"
+          class="pill-card w-full text-left flex items-center justify-between p-3.5 sm:p-4 group cursor-pointer"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-12 h-12 rounded-full bg-[#742284]/12 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-[#742284] text-white flex items-center justify-center shadow-sm font-extrabold text-[11px] tracking-tight">
+                yape
+              </div>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">YAPE</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">908 522 322</p>
+              <p class="text-[11.5px] text-slate-500 truncate">Omer Eduardo Barreto Davila · Ver QR</p>
+            </div>
+          </div>
+
+          <div class="w-10 h-10 rounded-full bg-[#742284] group-hover:bg-[#5d1a6a] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <path d="M14 14h3v3h-3z"/>
+              <path d="M20 14v7h-7"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Tarjeta 3: PLIN (Abre Modal con QR PLIN.jpg) -->
+        <button
+          type="button"
+          onclick="openQrModal('plin')"
+          class="pill-card w-full text-left flex items-center justify-between p-3.5 sm:p-4 group cursor-pointer"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-12 h-12 rounded-full bg-[#00d3b8]/15 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-gradient-to-br from-[#00e0b8] to-[#0099ff] text-white flex items-center justify-center shadow-sm font-extrabold text-[11px] tracking-tight">
+                plin
+              </div>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">PLIN</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">908 522 322</p>
+              <p class="text-[11.5px] text-slate-500 truncate">Omer Eduardo Barreto · Ver QR</p>
+            </div>
+          </div>
+
+          <div class="w-10 h-10 rounded-full bg-[#00b8c8] group-hover:bg-[#009bb0] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+              <path d="M14 14h3v3h-3z"/>
+              <path d="M20 14v7h-7"/>
+            </svg>
+          </div>
+        </button>
+
+        <!-- Tarjeta 4: TIKTOK -->
         <a
           href="https://www.tiktok.com/@ciclosbr24?_t=8nxn4pbcBZV&_r=1"
           target="_blank"
@@ -299,7 +276,7 @@
           </div>
         </a>
 
-        <!-- Tarjeta 3: FACEBOOK -->
+        <!-- Tarjeta 5: FACEBOOK -->
         <a
           href="https://www.facebook.com/profile.php?id=61561751783725"
           target="_blank"
@@ -329,7 +306,7 @@
           </div>
         </a>
 
-        <!-- Tarjeta 4: UBICACIÓN EN GOOGLE MAPS -->
+        <!-- Tarjeta 6: UBICACIÓN EN GOOGLE MAPS -->
         <a
           href="https://www.google.com/maps/place/Ciclos+BR24,+jiron,+Monterrey+540,+San+Mart%C3%ADn+de+Porres+15101/data=!4m2!3m1!1s0x9105cfe42dde20af:0x829b1f7623aec383?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEzNi4xMDEYACCIJypaLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjMwODE2LDk0MjE4NjUzLDQ3MDg3MTE4LDQ3MDg0MzkzLDk0MjEzMjAwQgJQRQ%3D%3D"
           target="_blank"
@@ -371,7 +348,62 @@
 
   </main>
 
-  <!-- Notificación Toast para el botón Compartir -->
+  <!-- Modal QR para Yape y Plin -->
+  <div
+    id="qrModal"
+    onclick="closeQrModalOnBackdrop(event)"
+    class="qr-modal-backdrop fixed inset-0 z-50 bg-slate-950/60 backdrop-blur-xs flex items-center justify-center p-4"
+  >
+    <div class="qr-modal-box w-full max-w-[360px] bg-white rounded-[28px] shadow-2xl overflow-hidden border border-slate-100">
+      <div id="qrModalHeader" class="px-5 py-4 flex items-center justify-between text-white bg-[#742284]">
+        <div>
+          <p id="qrModalTitle" class="text-base font-extrabold tracking-tight">Pagar con Yape</p>
+          <p id="qrModalHolder" class="text-xs text-white/90 font-medium">Omer Eduardo Barreto Davila</p>
+        </div>
+        <button
+          type="button"
+          onclick="closeQrModal()"
+          aria-label="Cerrar ventana QR"
+          class="w-8 h-8 rounded-full bg-white/20 hover:bg-white/30 flex items-center justify-center text-white text-lg font-bold cursor-pointer"
+        >
+          &times;
+        </button>
+      </div>
+
+      <div class="p-5 text-center">
+        <div class="bg-slate-50 rounded-2xl p-3 border border-slate-200/80 flex items-center justify-center">
+          <img
+            id="qrModalImg"
+            src="YAPE.jpg"
+            alt="Código QR de pago"
+            class="w-full max-h-[290px] object-contain rounded-xl"
+            onerror="this.style.display='none'; document.getElementById('qrImgFallback').style.display='flex';"
+          />
+          <div id="qrImgFallback" class="hidden flex-col items-center justify-center py-8 px-4 text-slate-500">
+            <p id="qrFallbackLabel" class="text-sm font-bold text-slate-800">QR Yape</p>
+            <p class="text-xs mt-1">Asegúrate de tener el archivo de imagen en la misma carpeta.</p>
+          </div>
+        </div>
+
+        <div class="mt-4 bg-slate-100 rounded-2xl px-4 py-3 flex items-center justify-between">
+          <div class="text-left">
+            <p class="text-[11px] font-bold uppercase tracking-wider text-slate-500">Número directo</p>
+            <p id="qrModalNumber" class="text-base font-extrabold text-slate-900">908522322</p>
+          </div>
+          <button
+            type="button"
+            onclick="copyPaymentNumber()"
+            id="qrCopyBtn"
+            class="px-4 py-2 rounded-full bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold cursor-pointer transition-colors"
+          >
+            Copiar número
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notificación Toast -->
   <div
     id="toastNotification"
     role="status"
@@ -379,67 +411,105 @@
     class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300 translate-y-2 flex items-center gap-2"
   >
     <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-    <span id="toastMessage">Enlace copiado</span>
+    <span id="toastMessage">Número copiado</span>
   </div>
 
-  <!-- Lógica de Compartir / Copiar Enlace -->
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const shareBtn = document.getElementById('shareBtn');
+    const paymentMethods = {
+      yape: {
+        title: 'Yape — 908522322',
+        holder: 'Omer Eduardo Barreto Davila',
+        number: '908522322',
+        img: 'YAPE.jpg',
+        headerBg: '#742284'
+      },
+      plin: {
+        title: 'Plin — 908522322',
+        holder: 'Omer Eduardo Barreto',
+        number: '908522322',
+        img: 'PLIN.jpg',
+        headerBg: '#00a8b5'
+      }
+    };
+
+    let currentPaymentNumber = '908522322';
+    let toastTimeout;
+
+    function showToast(text) {
       const toast = document.getElementById('toastNotification');
       const toastMessage = document.getElementById('toastMessage');
-      const siteUrl = 'https://ciclosbr24.shop';
-      let toastTimeout;
+      if (!toast || !toastMessage) return;
 
-      function showToast(text) {
-        if (!toast || !toastMessage) return;
-        toastMessage.textContent = text;
-        toast.classList.remove('opacity-0', 'translate-y-2');
-        toast.classList.add('opacity-100', 'translate-y-0');
+      toastMessage.textContent = text;
+      toast.classList.remove('opacity-0', 'translate-y-2');
+      toast.classList.add('opacity-100', 'translate-y-0');
 
-        clearTimeout(toastTimeout);
-        toastTimeout = setTimeout(() => {
-          toast.classList.remove('opacity-100', 'translate-y-0');
-          toast.classList.add('opacity-0', 'translate-y-2');
-        }, 2600);
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('opacity-100', 'translate-y-0');
+        toast.classList.add('opacity-0', 'translate-y-2');
+      }, 2600);
+    }
+
+    function openQrModal(methodKey) {
+      const data = paymentMethods[methodKey];
+      if (!data) return;
+
+      currentPaymentNumber = data.number;
+      document.getElementById('qrModalTitle').textContent = data.title;
+      document.getElementById('qrModalHolder').textContent = data.holder;
+      document.getElementById('qrModalNumber').textContent = data.number;
+      document.getElementById('qrModalHeader').style.backgroundColor = data.headerBg;
+      document.getElementById('qrFallbackLabel').textContent = 'Archivo esperado: ' + data.img;
+
+      const imgEl = document.getElementById('qrModalImg');
+      const fallbackEl = document.getElementById('qrImgFallback');
+      fallbackEl.style.display = 'none';
+      imgEl.style.display = 'block';
+      imgEl.src = data.img;
+
+      document.getElementById('qrModal').classList.add('open');
+    }
+
+    function closeQrModal() {
+      document.getElementById('qrModal').classList.remove('open');
+    }
+
+    function closeQrModalOnBackdrop(event) {
+      if (event.target.id === 'qrModal') {
+        closeQrModal();
       }
+    }
 
-      function fallbackCopy(url) {
-        const tempInput = document.createElement('input');
-        tempInput.value = url;
-        tempInput.style.position = 'fixed';
-        tempInput.style.opacity = '0';
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999);
-        try {
-          document.execCommand('copy');
-          showToast('Enlace copiado');
-        } catch (err) {
-          showToast('No se pudo copiar el enlace');
-        }
-        document.body.removeChild(tempInput);
+    function copyPaymentNumber() {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(currentPaymentNumber)
+          .then(() => showToast('Número ' + currentPaymentNumber + ' copiado'))
+          .catch(() => fallbackCopyText(currentPaymentNumber));
+      } else {
+        fallbackCopyText(currentPaymentNumber);
       }
+    }
 
-      if (shareBtn) {
-        shareBtn.addEventListener('click', async () => {
-          if (navigator.share) {
-            try {
-              await navigator.share({
-                title: 'Ciclos Br24',
-                text: 'Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado.',
-                url: siteUrl
-              });
-            } catch (err) {
-              if (err && err.name !== 'AbortError') {
-                fallbackCopy(siteUrl);
-              }
-            }
-          } else {
-            fallbackCopy(siteUrl);
-          }
-        });
+    function fallbackCopyText(text) {
+      const tempInput = document.createElement('input');
+      tempInput.value = text;
+      tempInput.style.position = 'fixed';
+      tempInput.style.opacity = '0';
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999);
+      try {
+        document.execCommand('copy');
+        showToast('Número ' + text + ' copiado');
+      } catch (err) {
+        showToast('No se pudo copiar');
       }
+      document.body.removeChild(tempInput);
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeQrModal();
     });
   </script>
 </body>
