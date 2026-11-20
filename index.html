@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ciclos Br24 | Enlaces Oficiales</title>
+  <meta name="description" content="Ciclos Br24 - Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado. Since 2020." />
+
+  <!-- Tipografía Plus Jakarta Sans & Inter desde Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      background-color: #eef2f6;
+      color: #0f172a;
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Banner superior con borde inferior suavemente arqueado */
+    .curved-banner {
+      background: linear-gradient(155deg, #062b56 0%, #0a4688 55%, #0e58a8 100%);
+      border-bottom-left-radius: 50% 24px;
+      border-bottom-right-radius: 50% 24px;
+    }
+
+    /* Animación de aura respirando suavemente alrededor del círculo del logo */
+    @keyframes breatheAura {
+      0%, 100% {
+        box-shadow:
+          0 8px 24px rgba(15, 23, 42, 0.12),
+          0 0 0 6px rgba(255, 255, 255, 0.65),
+          0 0 18px 8px rgba(14, 165, 233, 0.22);
+        transform: scale(1);
+      }
+      50% {
+        box-shadow:
+          0 12px 30px rgba(15, 23, 42, 0.16),
+          0 0 0 10px rgba(255, 255, 255, 0.45),
+          0 0 32px 16px rgba(14, 165, 233, 0.38);
+        transform: scale(1.028);
+      }
+    }
+
+    .logo-aura {
+      animation: breatheAura 4s ease-in-out infinite;
+    }
+
+    /* Tarjeta píldora con sombra elegante suave */
+    .pill-card {
+      background: #ffffff;
+      border-radius: 999px;
+      box-shadow: 0 6px 22px -4px rgba(15, 23, 42, 0.07), 0 2px 6px -1px rgba(15, 23, 42, 0.04);
+      transition: transform 0.22s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.22s ease;
+    }
+
+    .pill-card:hover {
+      transform: translateY(-2.5px);
+      box-shadow: 0 12px 28px -6px rgba(14, 165, 233, 0.18), 0 4px 10px -2px rgba(15, 23, 42, 0.06);
+    }
+
+    .pill-card:active {
+      transform: scale(0.985);
+    }
+
+    /* Botones circulares rápidos */
+    .quick-circle {
+      background: #ffffff;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.07);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .quick-circle:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(14, 165, 233, 0.2);
+    }
+
+    .quick-circle:active {
+      transform: scale(0.94);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center sm:py-8 sm:px-4">
+
+  <!-- Contenedor Principal Tipo Tarjeta Móvil -->
+  <main class="w-full max-w-[460px] min-h-screen sm:min-h-0 bg-[#f8fafc] sm:rounded-[32px] sm:shadow-[0_20px_50px_rgba(15,23,42,0.10)] overflow-hidden pb-8 border border-slate-200/70">
+
+    <!-- Encabezado Superior Curvo -->
+    <div class="curved-banner h-36 sm:h-40 w-full relative"></div>
+
+    <!-- Círculo Central con Logo Oficial y Aura Respirando -->
+    <div class="relative z-10 -mt-[64px] sm:-mt-[68px] flex justify-center px-4">
+      <div class="logo-aura w-[124px] h-[124px] sm:w-[132px] sm:h-[132px] rounded-full bg-white flex items-center justify-center p-3.5 border border-slate-100 overflow-hidden">
+        <img
+          src="logo.png"
+          alt="Ciclos Br24 Logo Oficial"
+          class="w-full h-full object-contain select-none"
+          onerror="this.style.display='none'; document.getElementById('logoFallback').style.display='flex';"
+        />
+        <!-- Fallback vectorial limpio en caso de no estar cargado logo.png -->
+        <div id="logoFallback" class="hidden flex-col items-center justify-center text-black w-full h-full">
+          <svg viewBox="0 0 220 130" class="w-24 h-auto" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="52" cy="84" r="24" stroke="#000000" stroke-width="8"/>
+            <circle cx="52" cy="84" r="6" fill="#000000"/>
+            <path d="M52 84L76 22H106" stroke="#000000" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="64" y="34" width="24" height="10" rx="3" fill="#000000"/>
+            <path d="M88 46L146 66L114 88H188" stroke="#000000" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M138 92C138 104 148 112 160 112C172 112 182 104 182 92" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
+            <text x="155" y="46" fill="#000000" font-family="Inter, sans-serif" font-size="9" font-weight="700" font-style="italic">Since</text>
+            <text x="150" y="58" fill="#000000" font-family="Inter, sans-serif" font-size="13" font-weight="900" font-style="italic">2020</text>
+          </svg>
+          <span class="font-extrabold italic text-sm tracking-tight text-black -mt-1">Ciclos Br24</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Título Principal y Subtítulo -->
+    <section class="text-center px-6 mt-5">
+      <h1 class="text-[26px] sm:text-[28px] font-extrabold text-slate-900 tracking-tight leading-tight">
+        Ciclos Br24
+      </h1>
+      <p class="mt-2 text-[13.5px] sm:text-[14px] text-slate-600 leading-relaxed max-w-[340px] mx-auto font-medium">
+        Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado. Since 2020.
+      </p>
+    </section>
+
+    <!-- Fila Horizontal de 5 Botones Circulares Rápidos -->
+    <section aria-label="Accesos directos" class="mt-6 px-4">
+      <div class="grid grid-cols-5 gap-2 max-w-[390px] mx-auto text-center">
+
+        <!-- 1. WhatsApp -->
+        <a
+          href="https://api.whatsapp.com/send?phone=51908522322"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center group"
+        >
+          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#25D366]">
+            <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.984L2 22l5.188-1.359a9.927 9.927 0 0 0 4.844 1.258h.004c5.514 0 9.964-4.453 9.964-9.969 0-2.662-1.037-5.164-2.92-7.047A9.903 9.903 0 0 0 12.031 2zm5.822 14.273c-.246.693-1.432 1.326-1.984 1.408-.508.076-1.15.109-1.857-.115-.43-.137-.982-.32-1.691-.627-2.977-1.285-4.92-4.281-5.068-4.479-.148-.197-1.211-1.611-1.211-3.074 0-1.463.766-2.182 1.037-2.479.271-.297.594-.371.791-.371.197 0 .395.002.568.01.182.008.426-.068.666.508.246.594.838 2.045.912 2.193.074.148.123.32.025.518-.098.197-.148.32-.297.494-.148.174-.312.389-.445.521-.148.148-.303.309-.131.605.174.297.771 1.271 1.656 2.061 1.139 1.016 2.098 1.33 2.395 1.479.297.148.469.123.643-.074.174-.197.742-.865.94-1.162.197-.297.395-.246.666-.148.271.098 1.729.816 2.025.965.297.148.494.223.568.346.074.123.074.715-.172 1.408z"/>
+            </svg>
+          </div>
+          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">WhatsApp</span>
+        </a>
+
+        <!-- 2. TikTok -->
+        <a
+          href="https://www.tiktok.com/@ciclosbr24?_t=8nxn4pbcBZV&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center group"
+        >
+          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-slate-900">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+            </svg>
+          </div>
+          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">TikTok</span>
+        </a>
+
+        <!-- 3. Facebook -->
+        <a
+          href="https://www.facebook.com/profile.php?id=61561751783725"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center group"
+        >
+          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#1877F2]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+            </svg>
+          </div>
+          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Facebook</span>
+        </a>
+
+        <!-- 4. Ubicación -->
+        <a
+          href="https://www.google.com/maps/place/Ciclos+BR24,+jiron,+Monterrey+540,+San+Mart%C3%ADn+de+Porres+15101/data=!4m2!3m1!1s0x9105cfe42dde20af:0x829b1f7623aec383?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEzNi4xMDEYACCIJypaLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjMwODE2LDk0MjE4NjUzLDQ3MDg3MTE4LDQ3MDg0MzkzLDk0MjEzMjAwQgJQRQ%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex flex-col items-center group"
+        >
+          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-[#EA4335]">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </div>
+          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Ubicación</span>
+        </a>
+
+        <!-- 5. Compartir -->
+        <button
+          id="shareBtn"
+          type="button"
+          class="flex flex-col items-center group focus:outline-none cursor-pointer"
+        >
+          <div class="quick-circle w-12 h-12 rounded-full flex items-center justify-center text-slate-800">
+            <svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+          </div>
+          <span class="mt-1.5 text-[11px] font-bold text-slate-700 group-hover:text-slate-900">Compartir</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- Sección Principal de Tarjetas Tipo Píldora -->
+    <section class="mt-8 px-4 sm:px-6">
+      <h2 class="text-center text-[11.5px] font-bold uppercase tracking-[0.16em] text-slate-500 mb-4">
+        CONECTA CON NOSOTROS
+      </h2>
+
+      <div class="space-y-3.5">
+
+        <!-- Tarjeta 1: WHATSAPP OFICIAL -->
+        <a
+          href="https://api.whatsapp.com/send?phone=51908522322"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill-card flex items-center justify-between p-3.5 sm:p-4 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <!-- Icono circular de marca -->
+            <div class="w-12 h-12 rounded-full bg-[#25D366]/12 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12.031 2c-5.516 0-9.969 4.453-9.969 9.969 0 1.758.459 3.473 1.332 4.984L2 22l5.188-1.359a9.927 9.927 0 0 0 4.844 1.258h.004c5.514 0 9.964-4.453 9.964-9.969 0-2.662-1.037-5.164-2.92-7.047A9.903 9.903 0 0 0 12.031 2zm5.822 14.273c-.246.693-1.432 1.326-1.984 1.408-.508.076-1.15.109-1.857-.115-.43-.137-.982-.32-1.691-.627-2.977-1.285-4.92-4.281-5.068-4.479-.148-.197-1.211-1.611-1.211-3.074 0-1.463.766-2.182 1.037-2.479.271-.297.594-.371.791-.371.197 0 .395.002.568.01.182.008.426-.068.666.508.246.594.838 2.045.912 2.193.074.148.123.32.025.518-.098.197-.148.32-.297.494-.148.174-.312.389-.445.521-.148.148-.303.309-.131.605.174.297.771 1.271 1.656 2.061 1.139 1.016 2.098 1.33 2.395 1.479.297.148.469.123.643-.074.174-.197.742-.865.94-1.162.197-.297.395-.246.666-.148.271.098 1.729.816 2.025.965.297.148.494.223.568.346.074.123.074.715-.172 1.408z"/>
+                </svg>
+              </div>
+            </div>
+            <!-- 3 líneas de texto exactas -->
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">WHATSAPP OFICIAL</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">+51 908 522 322</p>
+              <p class="text-[11.5px] text-slate-500 truncate">Atención, ventas y cotizaciones</p>
+            </div>
+          </div>
+
+          <!-- Botón circular de acción a la derecha -->
+          <div class="w-10 h-10 rounded-full bg-[#0ea5e9] group-hover:bg-[#0284c7] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 2: TIKTOK -->
+        <a
+          href="https://www.tiktok.com/@ciclosbr24?_t=8nxn4pbcBZV&_r=1"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill-card flex items-center justify-between p-3.5 sm:p-4 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-12 h-12 rounded-full bg-slate-900/10 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">TIKTOK</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">@ciclosbr24</p>
+              <p class="text-[11.5px] text-slate-500 truncate">Videos, novedades y entregas</p>
+            </div>
+          </div>
+
+          <div class="w-10 h-10 rounded-full bg-[#0ea5e9] group-hover:bg-[#0284c7] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 3: FACEBOOK -->
+        <a
+          href="https://www.facebook.com/profile.php?id=61561751783725"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill-card flex items-center justify-between p-3.5 sm:p-4 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-12 h-12 rounded-full bg-[#1877F2]/12 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-[#1877F2] text-white flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">FACEBOOK</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">Ciclos Br24</p>
+              <p class="text-[11.5px] text-slate-500 truncate">Catálogo, publicaciones y comunidad</p>
+            </div>
+          </div>
+
+          <div class="w-10 h-10 rounded-full bg-[#0ea5e9] group-hover:bg-[#0284c7] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Tarjeta 4: UBICACIÓN EN GOOGLE MAPS -->
+        <a
+          href="https://www.google.com/maps/place/Ciclos+BR24,+jiron,+Monterrey+540,+San+Mart%C3%ADn+de+Porres+15101/data=!4m2!3m1!1s0x9105cfe42dde20af:0x829b1f7623aec383?utm_source=mstt_1&entry=gps&coh=192189&g_ep=CAESCjExLjEzNi4xMDEYACCIJypaLDk0MjEyNDk2LDk0MjA3Mzk0LDk0MjA3NTA2LDk0MjA4NTA2LDk0MjE3NTIzLDk0MjMwODE2LDk0MjE4NjUzLDQ3MDg3MTE4LDQ3MDg0MzkzLDk0MjEzMjAwQgJQRQ%3D%3D"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="pill-card flex items-center justify-between p-3.5 sm:p-4 group"
+        >
+          <div class="flex items-center gap-3.5 min-w-0">
+            <div class="w-12 h-12 rounded-full bg-[#EA4335]/12 flex items-center justify-center shrink-0">
+              <div class="w-10 h-10 rounded-full bg-[#EA4335] text-white flex items-center justify-center shadow-sm">
+                <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                  <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+                </svg>
+              </div>
+            </div>
+            <div class="min-w-0">
+              <p class="text-[13.5px] font-extrabold text-slate-900 tracking-tight truncate">UBICACIÓN EN GOOGLE MAPS</p>
+              <p class="text-[13px] font-semibold text-slate-700 truncate">Jr. Monterrey 540</p>
+              <p class="text-[11.5px] text-slate-500 truncate">San Martín de Porres 15101</p>
+            </div>
+          </div>
+
+          <div class="w-10 h-10 rounded-full bg-[#0ea5e9] group-hover:bg-[#0284c7] text-white flex items-center justify-center shrink-0 transition-colors shadow-sm">
+            <svg class="w-4 h-4 stroke-current" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+              <path d="M7 17L17 7"/>
+              <path d="M7 7h10v10"/>
+            </svg>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Pie de Página Minimalista -->
+    <footer class="mt-9 text-center px-4">
+      <p class="text-[12px] font-medium text-slate-400">
+        &copy; 2026 Ciclos Br24 &bull; Since 2020
+      </p>
+    </footer>
+
+  </main>
+
+  <!-- Notificación Toast para el botón Compartir -->
+  <div
+    id="toastNotification"
+    role="status"
+    aria-live="polite"
+    class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900 text-white text-xs font-semibold px-4 py-2.5 rounded-full shadow-xl opacity-0 pointer-events-none transition-all duration-300 translate-y-2 flex items-center gap-2"
+  >
+    <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+    <span id="toastMessage">Enlace copiado</span>
+  </div>
+
+  <!-- Lógica de Compartir / Copiar Enlace -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const shareBtn = document.getElementById('shareBtn');
+      const toast = document.getElementById('toastNotification');
+      const toastMessage = document.getElementById('toastMessage');
+      const siteUrl = 'https://ciclosbr24.shop';
+      let toastTimeout;
+
+      function showToast(text) {
+        if (!toast || !toastMessage) return;
+        toastMessage.textContent = text;
+        toast.classList.remove('opacity-0', 'translate-y-2');
+        toast.classList.add('opacity-100', 'translate-y-0');
+
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-2');
+        }, 2600);
+      }
+
+      function fallbackCopy(url) {
+        const tempInput = document.createElement('input');
+        tempInput.value = url;
+        tempInput.style.position = 'fixed';
+        tempInput.style.opacity = '0';
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        tempInput.setSelectionRange(0, 99999);
+        try {
+          document.execCommand('copy');
+          showToast('Enlace copiado');
+        } catch (err) {
+          showToast('No se pudo copiar el enlace');
+        }
+        document.body.removeChild(tempInput);
+      }
+
+      if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+          if (navigator.share) {
+            try {
+              await navigator.share({
+                title: 'Ciclos Br24',
+                text: 'Movilidad eléctrica, bicicletas, repuestos y servicio técnico especializado.',
+                url: siteUrl
+              });
+            } catch (err) {
+              if (err && err.name !== 'AbortError') {
+                fallbackCopy(siteUrl);
+              }
+            }
+          } else {
+            fallbackCopy(siteUrl);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
